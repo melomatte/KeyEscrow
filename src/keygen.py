@@ -1,3 +1,9 @@
+'''
+Questo script contiene la funzione necessaria per la generazione di tutte le chiavi RSA delle entità del prototipo (client+ capo+N escrow agents).
+La funzione presente genera delle coppie di chiavi RSA, salvando quelle pubbliche in una cartella e
+quelle private in un altra. 
+'''
+
 ##############
 # IMPORT SECTION
 ##############
@@ -5,12 +11,16 @@
 from Crypto.PublicKey import RSA
 import os
 
+##############
+# FUNCTION SECTION
+##############
+
 def generate_all_keys(n_agents, public_dir, private_dir):
     os.makedirs(public_dir, exist_ok=True)
     os.makedirs(private_dir, exist_ok=True)
     
     # Entità: agent_1...agent_N + CAPO + Client
-    entities = [f"agent_{i}" for i in range(1, n_agents + 1)] + ["CAPO", "client"]
+    entities = [f"AGENT_{i}" for i in range(1, n_agents + 1)] + ["CAPO", "CLIENT"]
     
     print(f"[KEYGEN] Generazione di {len(entities)} coppie di chiavi...")
     
