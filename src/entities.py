@@ -141,7 +141,7 @@ class CapoThread(threading.Thread):
                 print(f"[{self.name}] Errore decifratura: {e}")
 
         # Ricostruzione e verifica con la chiave salvata nel file self.path_secret
-        print(f"[{self.name}] Ricostruzione della chiave con i {self.t} frammenti ricevuti")
+        print(f"[{self.name}] Ricostruzione della chiave con i {self.threshold} frammenti ricevuti")
         try:
             master_secret = crypto_utils.recover_key(collected_shares)
             
