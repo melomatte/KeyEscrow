@@ -1,6 +1,15 @@
+
 # KeyEscrow
 
-Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
+<img src="https://raw.githubusercontent.com/melomatte/KeyEscrow/main/assets/header.png" alt="KeyEscrow Header" width="800"/>
+
+### Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
+
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![PyCryptodome](https://img.shields.io/badge/PyCryptodome-3.x-orange.svg)](https://www.pycryptodome.org/)
+
+</div>
 
 ## 📋 Descrizione
 
@@ -183,7 +192,17 @@ Questo è un **prototipo educativo**. In un sistema di produzione considerare:
 
 ## 👤 Autore
 
-**melomatte**
-GitHub: [@melomatte](https://github.com/melomatte)
+<div align="center">
+
+<a href="https://github.com/melomatte">
+  <img src="https://github.com/melomatte.png" width="100" style="border-radius: 50%;" alt="melomatte"/>
+</a>
+
+### **melomatte**
+
+[![GitHub](https://img.shields.io/badge/GitHub-melomatte-181717?style=for-the-badge&logo=github)](https://github.com/melomatte)
+[![Profile](https://img.shields.io/badge/View_Profile-Profile-blue?style=for-the-badge)](https://github.com/melomatte)
+
+</div>
 
 ---
