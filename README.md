@@ -1,7 +1,9 @@
 
 # KeyEscrow
 
-<img src="/home/matteo/Documents/SicurezzaInformazione/KeyEscrow/logo.png" alt="KeyEscrow Header" width="800"/>
+<p align="center">
+  <img src="logo.png" width="200">
+</p>
 
 ### Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
 
