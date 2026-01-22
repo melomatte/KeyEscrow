@@ -1,3 +1,7 @@
+##############
+# INTRODUCTION SECTION
+##############
+
 '''
 Questo script contiene il codice eseguito da ogni entità per lo svolgimento del prototipo. 
 Le entità presenti sono le seguenti:

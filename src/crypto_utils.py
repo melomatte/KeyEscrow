@@ -1,3 +1,7 @@
+##############
+# INTRODUCTION SECTION
+##############
+
 '''
 Questo script contiene le funzioni necessarie per la gestione delle chiavi nel prototipo.
 Le funzioni che sono contenute nel file sono:

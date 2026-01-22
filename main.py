@@ -1,3 +1,7 @@
+##############
+# INTRODUCTION SECTION
+##############
+
 '''
 Lo script contiene il main del prototipo. Legge i parametri da stdin (tutti presentano un default)
 e procede a creare i canali per la comunicazione tra le entità (simulate come thread), che vengono

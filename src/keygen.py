@@ -1,3 +1,7 @@
+##############
+# INTRODUCTION SECTION
+##############
+
 '''
 Questo script contiene la funzione necessaria per la generazione di tutte le chiavi RSA delle entità del prototipo (client+ capo+N escrow agents).
 La funzione presente genera delle coppie di chiavi RSA, salvando quelle pubbliche in una cartella e
