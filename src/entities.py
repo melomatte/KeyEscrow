@@ -99,10 +99,9 @@ class AgentThread(threading.Thread):
                 try:
                     print(f"[{self.name}] Decifratura con chiave privata del frammento memorizzato")
                     raw_share = crypto_utils.rsa_decrypt(self.vault, self.priv_path)
-                    idx, = raw_share.split(":")
                     capo_pub_path = os.path.join(self.pub_dir, "CAPO_pub.pem")
                     secure_transfer_packet = crypto_utils.rsa_encrypt(raw_share, capo_pub_path)
-                    print(f"[{self.name}] Invio del frammento {idx} al CAPO, cifrato con la sua chiave pubblica {capo_pub_path} ")
+                    print(f"[{self.name}] Invio del frammento al CAPO, cifrato con la sua chiave pubblica {capo_pub_path} ")
                     self.capo_q.put(secure_transfer_packet)
                     print(f"[{self.name}] Frammento inviato in modo sicuro al CAPO")
                     break
