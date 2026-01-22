@@ -5,7 +5,7 @@
   <img src="logo.png" width="200">
 </p>
 
-### Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
+Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![PyCryptodome](https://img.shields.io/badge/PyCryptodome-3.x-orange.svg)](https://www.pycryptodome.org/)
