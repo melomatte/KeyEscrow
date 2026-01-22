@@ -1,7 +1,7 @@
 
 # KeyEscrow
 
-<img src="/https://www.google.com/search?q=divisione+sicura+chiavi+crittografiche+escrow&sca_esv=0b64f9733fed06e0&udm=2&biw=1519&bih=714&aic=0&sxsrf=ANbL-n6eb4yWpaCSHwDVk2RqdW1ADF6blQ%3A1769103547921&ei=u2ByacnyN8G5i-gPh7K74Ac&ved=0ahUKEwiJvK2k2J-SAxXB3AIHHQfZDnwQ4dUDCBI&uact=5&oq=divisione+sicura+chiavi+crittografiche+escrow&gs_lp=Egtnd3Mtd2l6LWltZyItZGl2aXNpb25lIHNpY3VyYSBjaGlhdmkgY3JpdHRvZ3JhZmljaGUgZXNjcm93SIUvUI8HWMgrcAF4AJABAJgBPaAB5gmqAQIyMrgBA8gBAPgBAZgCAKACAJgDAIgGAZIHAKAHiAKyBwC4BwDCBwDIBwCACAE&sclient=gws-wiz-img#sv=CAMSVhoyKhBlLUk4MGFCcDQ4XzgxWk9NMg5JODBhQnA0OF84MVpPTToOMTlBazZaa1dUaGtsTk0gBCocCgZtb3NhaWMSEGUtSTgwYUJwNDhfODFaT00YADABGAcgqcvgWTACSgoIAhACGAIgAigC" alt="KeyEscrow Header" width="800"/>
+<img src="/home/matteo/Documents/SicurezzaInformazione/KeyEscrow/logo.png" alt="KeyEscrow Header" width="800"/>
 
 ### Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
 
