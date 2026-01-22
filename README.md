@@ -62,6 +62,7 @@ Il sistema è composto da tre entità, simulate come thread distinti:
 ### Prerequisiti
 
 - Python 3.7+
+- python3.10-venv
 - pip
 
 ### Setup
@@ -70,6 +71,10 @@ Il sistema è composto da tre entità, simulate come thread distinti:
 # Clone del repository
 git clone https://github.com/melomatte/KeyEscrow.git
 cd KeyEscrow
+
+# Installazione e attivazione venv
+python3 -m venv .venv
+source .venv/bin/activate
 
 # Installazione dipendenze
 pip install -r requirements.txt
