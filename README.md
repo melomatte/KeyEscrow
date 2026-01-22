@@ -184,11 +184,6 @@ Questo è un **prototipo educativo**. In un sistema di produzione considerare:
 ## 👤 Autore
 
 **melomatte**
-
-- GitHub: [@melomatte](https://github.com/melomatte)
-
-## 🙏 Riconoscimenti
-
-- [PyCryptodome](https://www.pycryptodome.org/) per le primitive crittografiche
+GitHub: [@melomatte](https://github.com/melomatte)
 
 ---
