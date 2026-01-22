@@ -1,12 +1,11 @@
 
 # KeyEscrow
 
-<img src="https://raw.githubusercontent.com/melomatte/KeyEscrow/main/assets/header.png" alt="KeyEscrow Header" width="800"/>
+<img src="/home/matteo/Documents/SicurezzaInformazione/KeyEscrow/data/how-does-encyrption-work-283x283.png" alt="KeyEscrow Header" width="800"/>
 
 ### Un sistema di key escrow simulato che implementa il protocollo di Shamir Secret Sharing per la gestione sicura e distribuita delle chiavi crittografiche.
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PyCryptodome](https://img.shields.io/badge/PyCryptodome-3.x-orange.svg)](https://www.pycryptodome.org/)
 
 </div>
