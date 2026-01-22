@@ -1,7 +1,7 @@
 ##############
 # IMPORT SECTION
 ##############
-
+import os
 from cryptography.fernet import Fernet
 from Crypto.Protocol.SecretSharing import Shamir
 from Crypto.Cipher import PKCS1_OAEP
@@ -11,19 +11,21 @@ from binascii import hexlify, unhexlify
 ##############
 # FUNCTION SECTION
 ##############
-
 def generate_aes_key():
-    """Genera una chiave simmetrica AES (usata via Fernet)."""
-    return Fernet.generate_key()
+    """
+    Genera 16 byte di entropia pura.
+    PyCryptodome Shamir accetta stringhe di byte di lunghezza 16.
+    """
+    return os.urandom(16)
 
 def split_key(key, threshold, shares_count):
     """Divide la chiave in N frammenti con soglia T."""
-    # Shamir.split richiede byte grezzi
+    # key deve essere lunga esattamente 16 byte
     shares = Shamir.split(threshold, shares_count, key)
     return [(idx, hexlify(share).decode()) for idx, share in shares]
 
 def recover_key(shares_list):
-    """Ricostruisce la chiave dai frammenti (indice, hex_value)."""
+    """Ricostruisce la chiave dai frammenti."""
     formatted_shares = [(idx, unhexlify(share_hex)) for idx, share_hex in shares_list]
     return Shamir.combine(formatted_shares)
 

@@ -2,6 +2,7 @@
 # IMPORT SECTION
 ##############
 
+import argparse
 import sys
 import os
 from queue import Queue
@@ -13,41 +14,35 @@ from src.entities import ClientThread, AgentThread, CapoThread
 ##############
 
 def main():
-    if len(sys.argv) < 2:
-        print("Utilizzo: python main.py <percorso_supporto_esterno>")
-        print("Esempio: python main.py ./external_usb_sim")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Simulazione sistema key escrow")
+    parser.add_argument("--public", default="data/keys/public", help="Cartella dove verranno salvate chiavi pubbliche per l'esecuzione del prototipo")
+    parser.add_argument("--private", default="data/keys/private", help="Cartella dove verranno salvate le chiavi private per l'esecuzione del prototipo ")
+    parser.add_argument("--secret", default="data/secret", help="Nome del file dove viene salvata la chiave AES generata dal client")
+    parser.add_argument("--n", type=int, default=5, help="Numero di escrow agent generato dal sistema (ad ogni escrow agent viene assegnata una parte della chiave AES)")
+    parser.add_argument("--t", type=int, default=3, help="Soglia di treshold, numero di escrow agent necessri per ricostruire il segreto")
+    args = parser.parse_args()
 
-    EXTERNAL_STORAGE = sys.argv[1]
-    PUBLIC_STORAGE = "keys/public"
-    N, T = 5, 3
+    # Generazione delle chiavi tramite lo script keygen.py
+    generate_all_keys(args.n, args.public, args.private)
     
-    # 1. Workflow: Generazione Chiavi
-    # Le chiavi private finiscono nel percorso passato da riga di comando
-    if not os.path.exists(os.path.join(EXTERNAL_STORAGE, "CAPO_priv.pem")):
-        print("[SYSTEM] Inizializzazione chiavi sui supporti...")
-        generate_all_keys(N, PUBLIC_STORAGE, EXTERNAL_STORAGE)
-    
-    # 2. Setup Canali di Comunicazione
-    agent_qs = [Queue() for _ in range(N)]
+    # Setup Canali di Comunicazione
+    agent_qs = [Queue() for _ in range(args.n)]
     capo_q = Queue()
     
-    # 3. Lancio Entità
-    agents = [AgentThread(i, agent_qs[i-1], capo_q, EXTERNAL_STORAGE) for i in range(1, N+1)]
-    capo = CapoThread(T, agent_qs, capo_q, EXTERNAL_STORAGE)
-    client = ClientThread(N, T, agent_qs)
+    # Lancio entità del sistema
+    agents = [AgentThread(i, agent_qs[i-1], capo_q, args.public, args.private) for i in range(1, args.n+1)]
+    capo = CapoThread(args.t, agent_qs, capo_q, args.public, args.private, args.secret)
+    client = ClientThread(args.n, args.t, agent_qs, args.public, args.private, args.secret)
     
-    for a in agents: 
+    for a in agents:
         a.daemon = True
         a.start()
     
-    capo.start()
     client.start()
+    capo.start()
     
-    # Il main attende la conclusione del Capo e del Client
     client.join()
     capo.join()
-    print("\n[SYSTEM] Simulazione terminata correttamente.")
 
 if __name__ == "__main__":
     main()
