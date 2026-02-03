@@ -161,14 +161,9 @@ Il sistema utilizza `Queue` di Python per garantire comunicazioni thread-safe tr
 
 Questo è un **prototipo educativo**. In un sistema di produzione considerare:
 
-- Generazione di chiavi con entropia crittograficamente sicura
-- Gestione sicura delle chiavi private (HSM, secure enclaves)
+- Gestione sicura delle chiavi private
 - Autenticazione e autorizzazione degli agents
 - Canali di comunicazione autenticati e cifrati (TLS)
-- Logging e audit trail delle operazioni
-- Protezione contro attacchi timing
-- Key rotation e revoca
-- Protezione della memoria (memory wiping)
 
 ## 📊 Output di Esempio
 
